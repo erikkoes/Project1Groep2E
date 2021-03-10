@@ -10,7 +10,7 @@ public class Main {
 class Vraag{
    private String typeVraag;
    private String vraag;
-   private Stirng goedAntwoord;
+   private String goedAntwoord;
 
    Vraag(String typeVraag){
 
