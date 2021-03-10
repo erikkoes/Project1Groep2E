@@ -41,6 +41,18 @@ class Examen {
         this.soortVragen=soortVragen;
     }
 
+    public String getNaam() {
+        return this.naam;
+    }
+
+    public Integer getAantalVragen() {
+        return this.aantalVragen;
+    }
+
+    public String getSoortVragen() {
+        return this.soortVragen;
+    }
+
     
 
 }
