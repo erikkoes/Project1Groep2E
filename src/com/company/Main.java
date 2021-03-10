@@ -8,11 +8,13 @@ class Main {
     }
 }
 
-class menu {
-    menu(){
+class Menu {
+
+    Menu(){
         System.out.println("Welkom bij het examencommissie programma van projectgroep 2E");
     }
-    public displayMenu(){
+
+    public void displayMenu(){
         System.out.println("1) Lijst met examens");
         System.out.println("2) Lijst met studenten");
         System.out.println("3) Nieuwe student inschrijven");
@@ -22,14 +24,16 @@ class menu {
         System.out.println("7) Welke examens heeft student gehaald?");
         System.out.println("8) Welke student heeft de meeste examens gehaald?");
         System.out.println("0) Exit");
-
+/* pls???? */
     }
 }
 
 class Vraag {
+
     private String typeVraag;
     private String vraag;
     private String goedAntwoord;
+    
     Vraag(String typeVraag, String vraag, String goedAntwoord){
        this.typeVraag=typeVraag;
        this.vraag = vraag;
