@@ -3,16 +3,17 @@ package com.company;
 public class Main {
 
     public static void main(String[] args) {
-
-
     }
     //testestest
 }
 
-class testclass{
-    public static Integer e;
-    testclass(Integer e){
+class Vraag{
+   private String typeVraag;
+   private String vraag;
+   private Stirng goedAntwoord;
 
-        e=e;
-    }
+   Vraag(String typeVraag){
+
+   
+   }
 }
