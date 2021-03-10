@@ -17,13 +17,13 @@ class Vraag {
        this.vraag = vraag;
        this.goedAntwoord = goedAntwoord;
    }
-   public getGoedAntwoord(){
+   public String getGoedAntwoord(){
        return this.goedAntwoord;
    }
-   public getVraag(){
+   public String getVraag(){
        return this.vraag;
    }
-   public getTypeVraag(){
+   public String getTypeVraag(){
        return this.typeVraag;
    }
 }
