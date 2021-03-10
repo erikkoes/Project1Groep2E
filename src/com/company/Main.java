@@ -7,11 +7,11 @@ class Main {
     }
 }
 
-<<<<<<< Updated upstream
+
 class Examen {
     
 
-=======
+
 }
    Vraag(String typeVraag, String vraag, String goedAntwoord){
        this.typeVraag=typeVraag;
@@ -28,6 +28,6 @@ class Examen {
        return this.typeVraag;
    }
 }
->>>>>>> Stashed changes
+
 
 
