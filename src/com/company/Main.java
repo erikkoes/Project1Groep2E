@@ -8,11 +8,11 @@ class Main {
 }
 
 
-class Examen {
+
     
 
 
-}
+class Vraag {
    Vraag(String typeVraag, String vraag, String goedAntwoord){
        this.typeVraag=typeVraag;
        this.vraag = vraag;
@@ -29,5 +29,21 @@ class Examen {
    }
 }
 
+
+
+class Examen {
+    private String naam;
+    private Integer aantalVragen;
+    private String soortVragen;
+
+    Examen(String naam, Integer aantalVragen, String soortVragen) {
+        this.naam=naam;
+        this.aantalVragen=aantalVragen;
+        this.soortVragen=soortVragen;
+    }
+
+    
+
+}
 
 
