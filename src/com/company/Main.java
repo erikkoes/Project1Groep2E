@@ -59,7 +59,12 @@ class Examen {
         this.aantalVragen=aantalVragen;
         this.soortVragen=soortVragen;
     }
+}
+class Student {
+    private String name;
+    private Integer StudentenNummer;
 
+<<<<<<< Updated upstream
     public String getNaam() {
         return this.naam;
     }
@@ -74,6 +79,11 @@ class Examen {
 
     
 
+=======
+    Student(Integer StudentenNummer) {
+        this.StudentenNummer = StudentenNummer;
+    }
+>>>>>>> Stashed changes
 }
 
 
