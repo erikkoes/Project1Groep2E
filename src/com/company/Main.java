@@ -13,6 +13,12 @@ class Examen {
 
 
 }
+class Vraag {
+    private String typeVraag;
+    private String vraag;
+    private String goedAntwoord;
+
+
    Vraag(String typeVraag, String vraag, String goedAntwoord){
        this.typeVraag=typeVraag;
        this.vraag = vraag;
@@ -28,6 +34,5 @@ class Examen {
        return this.typeVraag;
    }
 }
-
 
 
