@@ -6,8 +6,6 @@ class Main {
 
         System.out.println("Hello");
 
-
-
     }
 }
 
@@ -27,8 +25,6 @@ class Menu {
         System.out.println("7) Welke examens heeft student gehaald?");
         System.out.println("8) Welke student heeft de meeste examens gehaald?");
         System.out.println("0) Exit");
-/* pls???? */
-
     }
 }
 
@@ -58,22 +54,24 @@ class Examen {
     private String naam;
     private Integer aantalVragen;
     private String soortVragen;
-
     Examen(String naam, Integer aantalVragen, String soortVragen) {
         this.naam=naam;
         this.aantalVragen=aantalVragen;
         this.soortVragen=soortVragen;
     }
+    public String getNaam() {
+        return this.naam;
+    }
+    public Integer getAantalVragen() {
+        return this.aantalVragen;
+    }
+    public String getSoortVragen() {
+        return this.soortVragen;
+    }
 }
 class Student {
     private String naam;
     private Integer StudentenNummer;
-
-
-
-
-    
-
 
     Student(Integer StudentenNummer) {
         this.StudentenNummer = StudentenNummer;
