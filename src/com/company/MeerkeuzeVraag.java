@@ -1,0 +1,4 @@
+class MeerkeuzeVraag extends Vraag{
+    
+
+}
