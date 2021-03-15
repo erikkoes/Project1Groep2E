@@ -4,6 +4,7 @@ class Resultaat {
 
     private Examen fromExamen;
     private Student byStudent;
+    private Double cijfer;
 
     public Resultaat(Student s, Examen e){
         this.fromExamen = e;
@@ -16,4 +17,5 @@ class Resultaat {
     public Student getByStudent(){
         return this.byStudent;
     }
+    
 }

@@ -1,26 +1,22 @@
 class Examen {
     private String naam;
+    private ArrayList<Vraag> vragen;
     private Integer aantalVragen;
-    private String soortVragen;
 
-    Examen(String naam, Integer aantalVragen, String soortVragen) {
+    Examen(String naam) {
         this.naam=naam;
-        this.aantalVragen=aantalVragen;
-        this.soortVragen=soortVragen;
     }
-
+    
     public String getNaam() {
         return this.naam;
     }
 
+    public ArrayList<Vraag> getVragen(){
+        return this.vragen;
+    }
+
     public Integer getAantalVragen() {
-        return this.aantalVragen;
-    }
-
-    public String getSoortVragen() {
-        return this.soortVragen;
-    }
-
-    
+        return vragen.size()
+    }  
 
 }

@@ -1,4 +1,3 @@
 class OpenVraag extends Vraag{
-
     
 }
