@@ -1,3 +1,4 @@
+import java.util.*;
 class Examen {
     private String naam;
     private ArrayList<Vraag> vragen;
@@ -16,7 +17,7 @@ class Examen {
     }
 
     public Integer getAantalVragen() {
-        return vragen.size()
+        return vragen.size();
     }  
 
 }
