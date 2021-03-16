@@ -11,8 +11,8 @@ class Menu {
         System.out.println("\n\nWelkom bij het examencommissie programma van projectgroep 2E\n\n");
     }
 
-    public void displayMenu(){
-        
+    public void displayMenu(Student s){
+        this.user = s;
         System.out.println("\n\n1) Examen afnemen");
         System.out.println("2) Is student geslaagd voor laatst gemaakt examen?");
         System.out.println("3) Welke examens heeft student gehaald?");
@@ -26,8 +26,8 @@ class Menu {
         System.out.println("0) Exit\n\n\n");
 
     }
-    public void menuChoice(){
-
+    public void menuChoice(Student s){
+        this.user = s;
         int choice = System.in.nextInt()
         switch(choice){
             case 4:

@@ -14,7 +14,7 @@ class Resultaat {
         vragen = new ArrayList<Vraag>();
         vragen.add(e.getVragen)
         goedOfFoutPerVraag = new ArrayList<Boolean>();
-        this.alleResultaten.add(this);
+        alleResultaten.add(this);
     }
     public Examen getFromExamen(){
         return this.fromExamen;
