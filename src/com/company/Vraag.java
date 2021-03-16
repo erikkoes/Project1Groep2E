@@ -13,5 +13,11 @@ class Vraag {
    public String getVraag(){
        return this.vraag;
    }
-
+   public void setVraag(String vraag){
+       this.vraag = vraag;
+   }
+   public void stelVraag() {
+       System.out.println(vraag);
+   }
+   
 }
