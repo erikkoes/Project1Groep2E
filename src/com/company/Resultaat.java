@@ -12,7 +12,7 @@ class Resultaat {
         this.fromExamen = e;
         this.byStudent = s;
         vragen = new ArrayList<Vraag>();
-        vragen.add(e.getVragen)
+        vragen.add(e.getVragen);
         goedOfFoutPerVraag = new ArrayList<Boolean>();
         alleResultaten.add(this);
     }
