@@ -1,4 +1,6 @@
+import java.util.*;
 class OpenVraag extends Vraag{
+
   private String goedAntwoord;
 
   OpenVraag(String vraag, String goedAntwoord) {
@@ -16,7 +18,6 @@ class OpenVraag extends Vraag{
     } else {
       return false;
     }
-
-    
   }
+
 }

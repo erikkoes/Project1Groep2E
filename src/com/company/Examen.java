@@ -1,8 +1,7 @@
 import java.util.*;
 class Examen {
+
     private String naam;
-    private Integer aantalVragen;
-    private String soortVragen;
     private ArrayList<Vraag> vragen;
     private ArrayList<Student> examenGeslaagd;
 
@@ -24,10 +23,6 @@ class Examen {
 
     public ArrayList<Student> getGeslaagd() {
         return examenGeslaagd;
-    }
-
-    public String getSoortVragen(){
-        return this.soortVragen;
     }
 
     public void stelVragen(Resultaat r){

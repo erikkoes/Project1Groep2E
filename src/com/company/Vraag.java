@@ -18,6 +18,8 @@ class Vraag {
     System.out.println(vraag);
    }
 
+   public Boolean stelVraag(){
+        return false; //moet een lege class zijn zodat het ge override kan worden
+   }
 
-   
 }

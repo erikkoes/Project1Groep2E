@@ -1,3 +1,4 @@
+import java.util.*;
 class Menu {
     /* dit object eenmalig aanmaken
     daarna displayMenu() en menuChoice() loopen*/
@@ -16,7 +17,7 @@ class Menu {
         System.out.println("\n\n1) Examen afnemen");
         System.out.println("2) Is student geslaagd voor laatst gemaakt examen?");
         System.out.println("3) Welke examens heeft student gehaald?");
-        if(user.getAdmin){
+        if(user.getAdmin()){
             System.out.println("4) Lijst met examens");
             System.out.println("5) Lijst met studenten");
             System.out.println("6) Nieuwe student inschrijven");
@@ -28,7 +29,8 @@ class Menu {
     }
     public void menuChoice(Student s){
         this.user = s;
-        int choice = System.in.nextInt()
+        Scanner scanner = new Scanner(System.in);
+        int choice = scanner.nextInt();
         switch(choice){
             case 4:
                 //todo: Lijst met examens displayen
@@ -64,7 +66,7 @@ class Menu {
 
 
     }
-    public getExit(){
+    public Boolean getExit(){
         return exit;
     }
 }

@@ -4,14 +4,12 @@ class MeerkeuzeVraag extends Vraag{
   private ArrayList<String> opties;
   private Integer goedAntwoord;
 
-
   MeerkeuzeVraag(String vraag) {
     super(vraag);
-    opties = new ArrayList<String>;
+    opties = new ArrayList<String>();
   }
 
   public void addOptie(String optie, Boolean correct) {
-    
     opties.add(optie);
     if (correct) {
       goedAntwoord = opties.size() +1;
@@ -19,7 +17,7 @@ class MeerkeuzeVraag extends Vraag{
   }
 
   public void displayVraag() {
-    System.out.println(vraag);
+    System.out.println(this.getVraag());
     String x = "";
     for(int i=0;i<opties.size();i++) {
       x = "["+(i+1)+"] ";
@@ -39,12 +37,4 @@ class MeerkeuzeVraag extends Vraag{
     }
   }
 
-  
-
-
-  
-
-
-
-    
 }

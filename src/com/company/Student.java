@@ -1,3 +1,4 @@
+import java.util.*;
 class Student {
     private static ArrayList<Student> alleStudenten = new ArrayList<Student>();
     
@@ -5,6 +6,10 @@ class Student {
     private Integer StudentenNummer;
     private ArrayList<Resultaat> gemaakteExamens;
     private Boolean admin = false;
+
+    public Boolean getAdmin() {
+        return this.admin;
+    }
 
     Student(Integer StudentenNummer, String naam) {
         this.StudentenNummer = StudentenNummer;
@@ -15,7 +20,7 @@ class Student {
         gemaakteExamens = new ArrayList<Resultaat>();
         alleStudenten.add(this);
     }
-    public maakExamen(Examen e){
+    public void maakExamen(Examen e){
       Resultaat r = new Resultaat(this, e);    //Er word hier een nieuwe Resultaat class aangemaakt. in deze class word opgeslgaen wat de student als resultaat heeft voor dit examen.
 
       e.stelVragen(r);  // in deze functie worden vragen gesteld, en word in de resultaten class toegevoegd of de vragen goed of fout zijn beantwoord.
