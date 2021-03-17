@@ -1,3 +1,4 @@
+import java.util.*;
 class MeerkeuzeVraag extends Vraag{
 
   private ArrayList<String> opties;
@@ -39,5 +40,17 @@ class MeerkeuzeVraag extends Vraag{
   }
 
   
+
+    opties.add(optie);
+    if (goedAntwoord) {
+      goedAntwoord = opties.size()
+    }
+  }
+
+  public Boolean stelVraag() {
+    System.out.println("Geef uw antwoord: ")
+
+  }
+
     
 }
