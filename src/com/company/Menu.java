@@ -2,7 +2,7 @@ class Menu {
     /* dit object eenmalig aanmaken
     daarna displayMenu() en menuChoice() loopen*/
 
-    private static Boolean exit = false; //Wanneer je uit de loop wilt, word dit naar true veranderd
+    private static Boolean exit = false; //Wanneer je uit de loop wilt, word dit naar true veranderd.
 
     private Student user;                /* de student die momenteel het menu gebruikt.
                                             als de student een Admin is, is het menu verbreedt.*/
@@ -56,7 +56,7 @@ class Menu {
                 break;
             case 0:
                 this.exit = true;
-                break:
+                break;
             default: 
                 System.out.println("\nInvalid input!\n");
         
