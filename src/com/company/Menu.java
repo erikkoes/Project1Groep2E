@@ -16,7 +16,7 @@ class Menu {
 
     public void displayMenu(){
         System.out.println("\n\n1) Examen afnemen");
-        System.out.println("2) Is student geslaagd voor laatst gemaakt examen?");
+        System.out.println("2) Is student geslaagd voor laatst gemaakte examen?");
         System.out.println("3) Welke examens heeft student gehaald?");
         if(user.getAdmin()){
             System.out.println("4) Lijst met examens");
@@ -53,18 +53,22 @@ class Menu {
                 break;
             case 1:
                 //examen afnemen            Todo Stan
+                for(Examen s:Examen.hetAlleExamens()){
+                  System.out.println(s.getNaam());
+                }
+                //user.maakExamen
                 break;
             case 2:
                 //is student geslaagd voor de test?     Todo Stan
                 break;
             case 3:
-                //welke examens heeft student gehaald       Todo Stan
-                for(Examen s:Examen.getGeslaagd()){
+                for(Examen s:User.getGeslaagd()){
                   System.out.println(s.getNaam());
                 }
                 break;
             case 8:
                 //welke student heeft de meeste examens gehaald?        Todo Stan
+
                 break;
             case 0:
                 this.exit = true;
