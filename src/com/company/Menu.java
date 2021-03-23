@@ -59,6 +59,9 @@ class Menu {
                 break;
             case 3:
                 //welke examens heeft student gehaald       Todo Stan
+                for(Examen s:Examen.getGeslaagd()){
+                  System.out.println(s.getNaam());
+                }
                 break;
             case 8:
                 //welke student heeft de meeste examens gehaald?        Todo Stan
