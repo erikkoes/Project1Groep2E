@@ -34,13 +34,19 @@ class Menu {
         switch(choice){
             case 4:
                 //todo: Lijst met examens displayen     todo Chris
-
+                for(Examen s:Examen.getAlleExamens()){
+                    System.out.println(s.getNaam());
+                }
                 break;
             case 5:
                 //lijst met studenten displayen     Todo Chris
+                for(Student s: student.getAlleStudenten()){
+                    System.out.println(s.getName());
+                }
                 break;
             case 6:
                 //nieuwe student inschrijven    Todo Chris
+
                 break;
             case 7:
                 //student verwijderen       Todo Chris

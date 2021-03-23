@@ -7,9 +7,7 @@ class Student {
     private ArrayList<Resultaat> gemaakteExamens;
     private Boolean admin = false;
 
-    public Boolean getAdmin() {
-        return this.admin;
-    }
+   
 
     Student(Integer StudentenNummer, String naam) {
         this.StudentenNummer = StudentenNummer;
@@ -19,6 +17,13 @@ class Student {
         }
         gemaakteExamens = new ArrayList<Resultaat>();
         alleStudenten.add(this);
+    }
+    public ArrayList<Student> getAlleStudenten(){
+        return alleStudenten;
+    }
+
+    public Boolean getAdmin() {
+        return this.admin;
     }
     public void maakExamen(Examen e){
       Resultaat r = new Resultaat(this, e);    //Er word hier een nieuwe Resultaat class aangemaakt. in deze class word opgeslgaen wat de student als resultaat heeft voor dit examen.
