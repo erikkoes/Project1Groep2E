@@ -10,7 +10,7 @@ class Main {
             
             
             
-            while(menu.getExit()==false;){
+            while(menu.getExit()==false){
                 menu.displayMenu();
                 menu.menuChoice();
                 

@@ -30,7 +30,7 @@ class Menu {
     }
     public void menuChoice(){
         this.user = s;
-        int choice = System.in.nextInt()
+        int choice = System.in.nextInt();
         switch(choice){
             case 4:
                 //todo: Lijst met examens displayen     todo Chris
@@ -65,7 +65,7 @@ class Menu {
                 break;
             case 0:
                 this.exit = true;
-                break:
+                break;
             default: 
                 System.out.println("\nInvalid input!\n");
         
@@ -73,7 +73,7 @@ class Menu {
 
 
     }
-    public getExit(){
+    public boolean getExit(){
         return exit;
     }
 }
