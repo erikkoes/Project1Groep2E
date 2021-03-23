@@ -1,12 +1,16 @@
 import java.util.*;
 class Examen {
-
+    private static ArrayList<Examen> alleExamens = new ArrayList<Examen>();
     private String naam;
     private ArrayList<Vraag> vragen;
     private ArrayList<Student> examenGeslaagd;
 
     Examen(String naam) {
         this.naam=naam;
+        alleExamens.add(this);
+    }
+    public ArrayList<Examen> getAlleExamens(){
+        return alleExamens;
     }
     
     public String getNaam() {

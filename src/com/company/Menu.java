@@ -1,19 +1,20 @@
-import java.util.*;
 class Menu {
     /* dit object eenmalig aanmaken
     daarna displayMenu() en menuChoice() loopen*/
 
-    private static Boolean exit = false; //Wanneer je uit de loop wilt, word dit naar true veranderd.
+    private static Boolean exit = false; //Wanneer je uit de loop wilt, word dit naar true veranderd
 
     private Student user;                /* de student die momenteel het menu gebruikt.
                                             als de student een Admin is, is het menu verbreedt.*/
 
     Menu(){
-        System.out.println("\n\nWelkom bij het examencommissie programma van projectgroep 2E\n\n");
+        System.out.println("\n\nWelkom bij het examencommissie programma van projectgroep 2E");
+        System.out.println("Voeg studentnummer en naam in om te beginnen\n\n");
+        Student user = new Student(System.in.nextInt(),System.in.nextLine());
     }
 
-    public void displayMenu(Student s){
-        this.user = s;
+
+    public void displayMenu(){
         System.out.println("\n\n1) Examen afnemen");
         System.out.println("2) Is student geslaagd voor laatst gemaakt examen?");
         System.out.println("3) Welke examens heeft student gehaald?");
@@ -27,38 +28,38 @@ class Menu {
         System.out.println("0) Exit\n\n\n");
 
     }
-    public void menuChoice(Student s){
+    public void menuChoice(){
         this.user = s;
-        Scanner scanner = new Scanner(System.in);
-        int choice = scanner.nextInt();
+        int choice = System.in.nextInt()
         switch(choice){
             case 4:
-                //todo: Lijst met examens displayen
+                //todo: Lijst met examens displayen     todo Chris
+
                 break;
             case 5:
-                //lijst met studenten displayen
+                //lijst met studenten displayen     Todo Chris
                 break;
             case 6:
-                //nieuwe student inschrijven
+                //nieuwe student inschrijven    Todo Chris
                 break;
             case 7:
-                //student verwijderen
+                //student verwijderen       Todo Chris
                 break;
             case 1:
-                //examen afnemen
+                //examen afnemen            Todo Stan
                 break;
             case 2:
-                //is student geslaagd voor de test?
+                //is student geslaagd voor de test?     Todo Stan
                 break;
             case 3:
-                //welke examens heeft student gehaald
+                //welke examens heeft student gehaald       Todo Stan
                 break;
             case 8:
-                //welke student heeft de meeste examens gehaald?
+                //welke student heeft de meeste examens gehaald?        Todo Stan
                 break;
             case 0:
                 this.exit = true;
-                break;
+                break:
             default: 
                 System.out.println("\nInvalid input!\n");
         
@@ -66,7 +67,7 @@ class Menu {
 
 
     }
-    public Boolean getExit(){
+    public getExit(){
         return exit;
     }
 }
