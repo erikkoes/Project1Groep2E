@@ -1,3 +1,5 @@
+import java.util.*;
+
 class Menu {
     /* dit object eenmalig aanmaken
     daarna displayMenu() en menuChoice() loopen*/
@@ -48,9 +50,10 @@ class Menu {
                 //nieuwe student inschrijven    Todo Chris
                 System.out.println("Voer naam in:");
                 String naam  = "";
-                naam = System.in.nextLine();
-                Student.getAlleStudenten.get
-                Student s = new Student()
+                Scanner scanner = new Scanner(System.in);
+                naam = scanner.nextLine();
+                Integer StudentNr = Student.getLastStudent().getStudentnumber()+1;
+                Student s = new Student(StudentNr,naam);
                 break;
             case 7:
                 //student verwijderen       Todo Chris

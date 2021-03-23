@@ -18,9 +18,10 @@ class Student {
         gemaakteExamens = new ArrayList<Resultaat>();
         alleStudenten.add(this);
     }
-    public ArrayList<Student> getAlleStudenten(){
+    public static  ArrayList<Student> getAlleStudenten(){
         return alleStudenten;
     }
+    public static  ArrayList<Student> getLastStudent(){return alleStudenten.get(alleStudenten.size())}
     public Integer getStudentNumber(){
       return this.StudentenNummer;
     }
