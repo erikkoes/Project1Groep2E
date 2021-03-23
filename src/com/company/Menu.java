@@ -46,17 +46,22 @@ class Menu {
                 break;
             case 6:
                 //nieuwe student inschrijven    Todo Chris
-
+                System.out.println("Voer naam in:");
+                String naam  = "";
+                naam = System.in.nextLine();
+                Student.getAlleStudenten.get
+                Student s = new Student()
                 break;
             case 7:
                 //student verwijderen       Todo Chris
                 break;
             case 1:
                 //examen afnemen            Todo Stan
-                for(Examen s:Examen.hetAlleExamens()){
+                for(Examen s:Examen.getAlleExamens()){
                   System.out.println(s.getNaam());
+                  //user.maakExamen
                 }
-                //user.maakExamen
+
                 break;
             case 2:
                 //is student geslaagd voor de test?     Todo Stan

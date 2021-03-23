@@ -21,6 +21,9 @@ class Student {
     public ArrayList<Student> getAlleStudenten(){
         return alleStudenten;
     }
+    public Integer getStudentNumber(){
+      return this.StudentenNummer;
+    }
 
     public Boolean getAdmin() {
         return this.admin;
