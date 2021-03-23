@@ -3,7 +3,6 @@ class Examen {
     private static ArrayList<Examen> alleExamens = new ArrayList<Examen>();
     private String naam;
     private ArrayList<Vraag> vragen;
-    private ArrayList<Student> examenGeslaagd;
 
     Examen(String naam) {
         this.naam=naam;
@@ -25,8 +24,8 @@ class Examen {
         return vragen.size();
     }  
 
-    public ArrayList<Student> getGeslaagd() {
-        return examenGeslaagd;
+    public void addVraag(Vraag v){
+        vragen.add(v);
     }
 
     public void stelVragen(Resultaat r){

@@ -1,4 +1,4 @@
-package com.company;
+//package com.company;
 import java.util.*;
 
 class Main {
@@ -18,7 +18,7 @@ class Main {
 
             Student piet = new Student(13579101,"Piet");
             Student klaas = new Student(58303853,"Klaas");
-            Student bertus = new Student (09159839,"Bertus");
+            Student bertus = new Student (9159839,"Bertus");
 
             Examen rekenen = new Examen("Rekenexamen");
 
@@ -28,7 +28,15 @@ class Main {
             rekenvraag1.addOptie("27",false);
             rekenvraag1.addOptie("2",true);
 
-            rekenvraag1
+            rekenen.addVraag(rekenvraag1);
+
+            MeerkeuzeVraag rekenvraag2 = new MeerkeuzeVraag("Wat is 15*3?");
+            rekenvraag2.addOptie("5",false);
+            rekenvraag2.addOptie("18",false);
+            rekenvraag2.addOptie("45",true);
+
+            rekenen.addVraag(rekenvraag2);
+
 
 
 
