@@ -62,12 +62,21 @@ class Menu {
                 //examen afnemen            Todo Stan
                 for(Examen s:Examen.getAlleExamens()){
                   System.out.println(s.getNaam());
+                  System.out.println("Welk examen wilt u afnemen?:");
+                  System.in.nextLine();
+
+
                   //user.maakExamen
                 }
 
                 break;
             case 2:
                 //is student geslaagd voor de test?     Todo Stan
+                for(Student s: Examen.getGeslaagd()){
+                  System.out.println(s.getNaam());
+
+                }
+
                 break;
             case 3:
                 for(Examen s:User.getGeslaagd()){
@@ -76,6 +85,9 @@ class Menu {
                 break;
             case 8:
                 //welke student heeft de meeste examens gehaald?        Todo Stan
+                for(Examen s: Examen.getAlleResultaten()){
+                  System.out.println(s.getNaam());
+                }
 
                 break;
             case 0:
