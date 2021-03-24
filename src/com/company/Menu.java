@@ -68,12 +68,17 @@ class Menu {
                 break;
             case 1:
                 //examen afnemen            Todo Stan
+                System.out.println("Deze examens zijn beschikbaar:");
                 for(Examen s:Examen.getAlleExamens()){
                   System.out.println(s.getNaam());
-                  System.out.println("Welk examen wilt u afnemen?:");
+                  }
+                }
+                System.out.println("Welk examen wilt u afnemen?:");
                   String examen = scanner.nextLine();
-
-                  //user.maakExamen
+                for(Examen s:Examen.getAlleExamens()){
+                  if(s.getNaam == examen){
+                    user.maakExamen();
+                  }
                 }
 
                 break;
