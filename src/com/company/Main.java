@@ -1,4 +1,4 @@
-//package com.company;
+package com.company;
 import java.util.*;
 
 class Main {
@@ -34,7 +34,9 @@ class Main {
 
      rekenen.addVraag(rekenvraag2);
 
-     OpenVraag rekenvr
+     OpenVraag rekenvraag3 = new OpenVraag("Wat is de wortel van 25?","5");
+     rekenen.addVraag(rekenvraag3);
+
 
 
 

@@ -73,7 +73,6 @@ class Menu {
                   System.out.println("Welk examen wilt u afnemen?:");
                   String examen = scanner.nextLine();
 
-
                   //user.maakExamen
                 }
 
@@ -88,7 +87,7 @@ class Menu {
                 break;
             case 3:
                 //welk examen heeft de student gehaald?         Todo Stan
-                for(Examen exa:User.getGeslaagd()){
+                for(Examen exa:user.getGeslaagd()){
                   System.out.println(stu.getNaam());
                 }
                 break;
