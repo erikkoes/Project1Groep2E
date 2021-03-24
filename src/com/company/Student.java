@@ -21,12 +21,17 @@ class Student {
     public static  ArrayList<Student> getAlleStudenten(){
         return alleStudenten;
     }
-    public static  ArrayList<Student> getLastStudent(){
-        return alleStudenten;
+    public static  Student getLastStudent(){
+        int x = alleStudenten.size();
+        return alleStudenten.get(x-1);
     }
 
     public Integer getStudentNumber(){
       return this.StudentenNummer;
+    }
+
+    public String getName() {
+      return this.naam;
     }
 
     public Boolean getAdmin() {

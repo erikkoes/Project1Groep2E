@@ -6,9 +6,10 @@ class Examen {
 
     Examen(String naam) {
         this.naam=naam;
+        vragen = new ArrayList<Vraag>();
         alleExamens.add(this);
     }
-    public ArrayList<Examen> getAlleExamens(){
+    public static ArrayList<Examen> getAlleExamens(){
         return alleExamens;
     }
     

@@ -10,9 +10,17 @@ class Menu {
                                             als de student een Admin is, is het menu verbreedt.*/
 
     Menu(){
-        System.out.println("\n\nWelkom bij het examencommissie programma van projectgroep 2E");
-        System.out.println("Voeg studentnummer en naam in om te beginnen\n\n");
-        Student user = new Student(System.in.nextInt(),System.in.nextLine());
+      Scanner scanner = new Scanner(System.in);
+      System.out.println("\n\nWelkom bij het examencommissie programma van projectgroep 2E");
+      System.out.println("Voeg studentnummer en naam in om te beginnen\n\n");
+
+      System.out.println("Studentnummer: ");   
+      Integer studentennummer = scanner.nextInt();
+
+      System.out.println("Naam: ");
+      String naam = scanner.nextLine();
+
+      Student user = new Student(studentennummer,naam);
     }
 
 
@@ -31,8 +39,9 @@ class Menu {
 
     }
     public void menuChoice(){
-        this.user = s;
-        int choice = System.in.nextInt();
+      Scanner scanner = new Scanner(System.in);
+        // this.user = s;
+        int choice = scanner.nextInt();
         switch(choice){
             case 4:
                 //todo: Lijst met examens displayen     todo Chris
@@ -42,7 +51,7 @@ class Menu {
                 break;
             case 5:
                 //lijst met studenten displayen     Todo Chris
-                for(Student s: student.getAlleStudenten()){
+                for(Student s: Student.getAlleStudenten()){
                     System.out.println(s.getName());
                 }
                 break;
@@ -50,7 +59,6 @@ class Menu {
                 //nieuwe student inschrijven    Todo Chris
                 System.out.println("Voer naam in:");
                 String naam  = "";
-                Scanner scanner = new Scanner(System.in);
                 naam = scanner.nextLine();
                 Integer StudentNr = Student.getLastStudent().getStudentnumber()+1;
                 Student s = new Student(StudentNr,naam);
@@ -63,7 +71,7 @@ class Menu {
                 for(Examen s:Examen.getAlleExamens()){
                   System.out.println(s.getNaam());
                   System.out.println("Welk examen wilt u afnemen?:");
-                  System.in.nextLine();
+                  String examen = scanner.nextLine();
 
 
                   //user.maakExamen
@@ -72,21 +80,22 @@ class Menu {
                 break;
             case 2:
                 //is student geslaagd voor de test?     Todo Stan
-                for(Student s: Examen.getGeslaagd()){
+                for(Student stu: Examen.getGeslaagd()){
                   System.out.println(s.getNaam());
 
                 }
 
                 break;
             case 3:
-                for(Examen s:User.getGeslaagd()){
-                  System.out.println(s.getNaam());
+                //welk examen heeft de student gehaald?         Todo Stan
+                for(Examen exa:User.getGeslaagd()){
+                  System.out.println(stu.getNaam());
                 }
                 break;
             case 8:
                 //welke student heeft de meeste examens gehaald?        Todo Stan
-                for(Examen s: Examen.getAlleResultaten()){
-                  System.out.println(s.getNaam());
+                for(Examen exam: Examen.getAlleResultaten()){
+                  System.out.println(exam.getNaam());
                 }
 
                 break;
