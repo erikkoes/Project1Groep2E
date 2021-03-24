@@ -13,7 +13,7 @@ class Resultaat {
         this.fromExamen = e;
         this.byStudent = s;
         vragen = new ArrayList<Vraag>();
-        vragen.add(e.getVragen()); //geeft error in IDE, kan blijkbaar geen lijst in lijst zetten
+//        vragen.add(e.getVragen()); //geeft error in IDE, kan blijkbaar geen lijst in lijst zetten
         goedOfFoutPerVraag = new ArrayList<Boolean>();
         alleResultaten.add(this);
     }

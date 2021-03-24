@@ -22,7 +22,7 @@ class Main {
 
             Examen rekenen = new Examen("Rekenexamen");
 
-            Meerkeuzevraag rekenvraag1 = new Meerkeuzevraag("Wat is 1+1?");
+            MeerkeuzeVraag rekenvraag1 = new MeerkeuzeVraag("Wat is 1+1?");
 
             rekenvraag1.addOptie("4",false);
             rekenvraag1.addOptie("27",false);

@@ -21,7 +21,10 @@ class Student {
     public static  ArrayList<Student> getAlleStudenten(){
         return alleStudenten;
     }
-    public static  ArrayList<Student> getLastStudent(){return alleStudenten.get(alleStudenten.size())}
+    public static  ArrayList<Student> getLastStudent(){
+        return alleStudenten;
+    }
+
     public Integer getStudentNumber(){
       return this.StudentenNummer;
     }
