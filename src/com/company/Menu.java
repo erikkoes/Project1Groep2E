@@ -60,7 +60,7 @@ class Menu {
                 System.out.println("Voer naam in:");
                 String naam  = "";
                 naam = scanner.nextLine();
-                Integer StudentNr = Student.getLastStudent().getStudentnumber()+1;
+                Integer StudentNr = Student.getLastStudent().getStudentNumber()+1;
                 Student s = new Student(StudentNr,naam);
                 break;
             case 7:
