@@ -83,7 +83,7 @@ class Menu {
                 break;
             case 2:
                 //is student geslaagd voor de test?     Todo Stan
-                for(Student stu: Examen.getGeslaagd()){
+                for(Student stu: Examen.getGeslaagd()){     //Todo getGeslaagd functie in Examen
                   System.out.println(stu.getName());
 
                 }

@@ -37,6 +37,7 @@ class Student {
     public Boolean getAdmin() {
         return this.admin;
     }
+
     public void maakExamen(Examen e){
       Resultaat r = new Resultaat(this, e);    //Er word hier een nieuwe Resultaat class aangemaakt. in deze class word opgeslgaen wat de student als resultaat heeft voor dit examen.
 
