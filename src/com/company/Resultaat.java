@@ -26,8 +26,8 @@ class Resultaat {
         return this.byStudent;
     }
 
-    public ArrayList<Resultaat> getAlleResultaten(){
-        return this.alleResultaten;
+    public static ArrayList<Resultaat> getAlleResultaten(){
+        return alleResultaten;
     }
 
     public void addGoedOfFoutPerVraag(Boolean b){

@@ -69,23 +69,22 @@ class Menu {
             case 1:
                 //examen afnemen            Todo Stan
                 System.out.println("Deze examens zijn beschikbaar:");
-                for(Examen s:Examen.getAlleExamens()){
-                  System.out.println(s.getNaam());
-                  }
-                }
-                System.out.println("Welk examen wilt u afnemen?:");
-                  String examen = scanner.nextLine();
-                for(Examen s:Examen.getAlleExamens()){
-                  if(s.getNaam == examen){
-                    user.maakExamen();
-                  }
+                for(Examen e:Examen.getAlleExamens()){
+                    System.out.println(e.getNaam());
                 }
 
+                System.out.println("Welk examen wilt u afnemen?:");
+                  String examen = scanner.nextLine();
+                for(Examen ex:Examen.getAlleExamens()){
+                  if(ex.getNaam() == examen){
+                    user.maakExamen(ex);
+                  }
+                }
                 break;
             case 2:
                 //is student geslaagd voor de test?     Todo Stan
                 for(Student stu: Examen.getGeslaagd()){
-                  System.out.println(s.getNaam());
+                  System.out.println(stu.getName());
 
                 }
 
@@ -93,13 +92,13 @@ class Menu {
             case 3:
                 //welk examen heeft de student gehaald?         Todo Stan
                 for(Examen exa:user.getGeslaagd()){
-                  System.out.println(stu.getNaam());
+                  System.out.println(exa.getNaam());
                 }
                 break;
             case 8:
                 //welke student heeft de meeste examens gehaald?        Todo Stan
-                for(Examen exam: Examen.getAlleResultaten()){
-                  System.out.println(exam.getNaam());
+                for(Resultaat res: Resultaat.getAlleResultaten()){
+                  System.out.println(res.getNaam());
                 }
 
                 break;
