@@ -23,6 +23,7 @@ class Menu {
       String naam = scanner.nextLine();
 
       this.user = new Student(studentennummer,naam);
+      user.setAdmin();
     }
 
 
@@ -67,7 +68,23 @@ class Menu {
                 Student s = new Student(StudentNr,naam);
                 break;
             case 7:
-                //student verwijderen       Todo Chris
+                //student verwijderen
+                System.out.println("Deze studenten zijn ingeschreven:");
+                int x = 1;
+                for(Student stu: Studentenlijst.getList()){
+                    System.out.println(x+") "+stu.getName());
+                    x++;
+                }
+                x=1;
+                System.out.println("Welke wilt u verwijderen?:");
+                int student = scanner.nextInt();
+                scanner.nextLine();
+                for(Student stud: Studentenlijst.getList()) {
+                    if (x == student) {
+                        System.out.println("Test");
+                    }
+                    x++;
+                }
                 break;
             case 1:
                 //examen afnemen            Todo Stan
@@ -83,7 +100,6 @@ class Menu {
                   scanner.nextLine();
                 for(Examen ex:Examen.getAlleExamens()){
                   if(i == examen){
-                      System.out.println("Test");
                     user.maakExamen(ex);
                   }
                   i++;

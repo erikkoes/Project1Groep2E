@@ -19,6 +19,14 @@ public class Studentenlijst {
         studentenlijst.add(s);
     }
 
+    public void removeStudent(String name) {
+        for (Student s: studentenlijst) {
+            if(s.getName().equals(name)) {
+                studentenlijst.remove(s);
+            }
+        }
+    }
+
     public Student getStudentOnName(String name) {
         for (Student s: studentenlijst) {
             if(s.getName().equals(name)) {
