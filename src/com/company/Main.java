@@ -1,14 +1,12 @@
-package com.company;
+
 import java.util.*;
+
 
 class Main {
 
     public static void main(String[] args) {
       Menu menu = new Menu();
-      while(menu.getExit()==false){
-        menu.displayMenu();
-        menu.menuChoice();
-      }
+
 
       //todo: verschillende Examen aanmaken met vragen
       //todo: Studenten aanmaken
@@ -38,9 +36,10 @@ class Main {
      rekenen.addVraag(rekenvraag3);
 
 
-
-
-
+     while(menu.getExit()==false){
+            menu.displayMenu();
+            menu.menuChoice();
+        }
 
     }
 }

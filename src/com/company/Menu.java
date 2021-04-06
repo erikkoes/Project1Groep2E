@@ -1,3 +1,4 @@
+
 import java.util.*;
 
 class Menu {
@@ -16,11 +17,12 @@ class Menu {
 
       System.out.println("Studentnummer: ");   
       Integer studentennummer = scanner.nextInt();
+      scanner.nextLine();
 
       System.out.println("Naam: ");
       String naam = scanner.nextLine();
 
-      Student user = new Student(studentennummer,naam);
+      this.user = new Student(studentennummer,naam);
     }
 
 
@@ -42,6 +44,7 @@ class Menu {
       Scanner scanner = new Scanner(System.in);
         // this.user = s;
         int choice = scanner.nextInt();
+        scanner.nextLine();
         switch(choice){
             case 4:
                 //todo: Lijst met examens displayen     todo Chris
@@ -69,37 +72,35 @@ class Menu {
             case 1:
                 //examen afnemen            Todo Stan
                 System.out.println("Deze examens zijn beschikbaar:");
+                int i = 1;
                 for(Examen e:Examen.getAlleExamens()){
-                    System.out.println(e.getNaam());
+                    System.out.println(i+") "+e.getNaam());
+                    i++;
                 }
-
+                i = 1;
                 System.out.println("Welk examen wilt u afnemen?:");
-                  String examen = scanner.nextLine();
+                  int examen = scanner.nextInt();
+                  scanner.nextLine();
                 for(Examen ex:Examen.getAlleExamens()){
-                  if(ex.getNaam() == examen){
+                  if(i == examen){
+                      System.out.println("Test");
                     user.maakExamen(ex);
                   }
+                  i++;
                 }
                 break;
             case 2:
                 //is student geslaagd voor de test?     Todo Stan
-                for(Student stu: Examen.getGeslaagd()){     //Todo getGeslaagd functie in Examen
-                  System.out.println(stu.getName());
 
-                }
 
                 break;
             case 3:
                 //welk examen heeft de student gehaald?         Todo Stan
-                for(Examen exa:user.getGeslaagd()){
-                  System.out.println(exa.getNaam());
-                }
+
                 break;
             case 8:
                 //welke student heeft de meeste examens gehaald?        Todo Stan
-                for(Resultaat res: Resultaat.getAlleResultaten()){
-                  System.out.println(res.getNaam());
-                }
+
 
                 break;
             case 0:
