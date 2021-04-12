@@ -46,4 +46,14 @@ class NewVraagTest {
         opvraag1.setVraag("Wat is 13+14?");
         assertEquals("Wat is 13+14?",opvraag1.getVraag());
     }
+
+    @Test
+    void testDisplayMeerkeuzeVraag() {
+        String expected = "Wat is de hoofdstad van Nederland?" +
+                "[1] Rotterdam" +
+                "[2] Den Haag" +
+                "[3] Groningen" +
+                "[4] Amsterdam";
+        assertEquals(expected,meerkvraag1.displayVraagTest());
+    }
 }

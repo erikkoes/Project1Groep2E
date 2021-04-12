@@ -25,6 +25,19 @@ class MeerkeuzeVraag extends Vraag{
     }
   }
 
+  public String displayVraagTest() {
+    String x="";
+    x+=this.getVraag();
+//    System.out.println(this.getVraag());
+    String y="";
+    for(int i=0;i<opties.size();i++) {
+      y = "["+(i+1)+"] ";
+      x+=y+opties.get(i);
+//      System.out.println(x+opties.get(i));
+    }
+    return x;
+  }
+
   public Boolean stelVraag() {
     System.out.println("Geef uw antwoord: ");
     Scanner scanner = new Scanner(System.in);
