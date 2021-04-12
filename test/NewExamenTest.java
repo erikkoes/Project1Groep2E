@@ -5,9 +5,7 @@ import java.util.*;
 
 import static org.junit.jupiter.api.Assertions.*;
 
-
-class NewVraagTest {
-
+class NewExamenTest {
     Student klaas;
 
     MeerkeuzeVraag meerkvraag1;
@@ -32,18 +30,5 @@ class NewVraagTest {
         klaas=null;
         meerkvraag1=null;
         opvraag1=null;
-    }
-
-    @Test
-    void testDisplayVraag() {
-        String expected="Wat is 5*5+2?";
-        String actual = opvraag1.displayVraagTest();
-        assertEquals(expected,actual);
-    }
-
-    @Test
-    void testSetVraag() {
-        opvraag1.setVraag("Wat is 13+14?");
-        assertEquals("Wat is 13+14?",opvraag1.getVraag());
     }
 }
