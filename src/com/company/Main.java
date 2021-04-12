@@ -1,12 +1,12 @@
-<<<<<<< HEAD
+
 
 import java.util.*;
 
 
-=======
+
 
 import java.util.*;
->>>>>>> 612aa271dc707c0e1a8e0c2c750d8fb44325df1e
+
 class Main {
 
     public static void main(String[] args) {
