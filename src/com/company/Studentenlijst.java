@@ -10,16 +10,16 @@ public class Studentenlijst {
         return studentenlijst.size();
     }
 
-    public Student getLastStudent() {
+    public static Student getLastStudent() {
         int index = studentenlijst.size() -1;
         return studentenlijst.get(index);
     }
 
-    public void addStudent(Student s) {
+    public static void addStudent(Student s) {
         studentenlijst.add(s);
     }
 
-    public void removeStudent(String name) {
+    public static void removeStudent(String name) {
         for (Student s: studentenlijst) {
             if(s.getName().equals(name)) {
                 studentenlijst.remove(s);
@@ -27,7 +27,7 @@ public class Studentenlijst {
         }
     }
 
-    public Student getStudentOnName(String name) {
+    public static Student getStudentOnName(String name) {
         for (Student s: studentenlijst) {
             if(s.getName().equals(name)) {
                 return s;
@@ -36,7 +36,7 @@ public class Studentenlijst {
         return null;
     }
 
-    public Student getStudentOnNumber(Integer number) {
+    public static Student getStudentOnNumber(Integer number) {
         for (Student s: studentenlijst) {
             if(s.getStudentNumber().equals(number)) {
                 return s;

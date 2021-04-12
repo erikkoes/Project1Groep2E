@@ -17,6 +17,7 @@ class Student {
         }
         gemaakteExamens = new ArrayList<Resultaat>();
         alleStudenten.add(this);
+        Studentenlijst.addStudent(this);
     }
     public static  ArrayList<Student> getAlleStudenten(){
         return alleStudenten;
