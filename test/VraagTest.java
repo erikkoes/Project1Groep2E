@@ -7,7 +7,7 @@ import java.util.*;
 
 import static org.junit.jupiter.api.Assertions.*;
 
-class VraagTest {
+//class VraagTest {
 
 //    @Test
 //    void getVraag() {
