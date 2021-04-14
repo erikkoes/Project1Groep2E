@@ -2,7 +2,7 @@ import java.util.*;
 class MeerkeuzeVraag extends Vraag{
 
   private ArrayList<String> opties;
-  private Integer goedAntwoord;
+  private String goedAntwoord;
 
   MeerkeuzeVraag(String vraag) {
     super(vraag);
@@ -10,10 +10,12 @@ class MeerkeuzeVraag extends Vraag{
   }
 
   public void addOptie(String optie, Boolean correct) {
+    Integer x=0;
     opties.add(optie);
     if (correct) {
-      goedAntwoord = opties.size() +1;
+      x = opties.size();
     }
+    goedAntwoord= String.format("%d", x);
   }
 
   public void displayVraag() {
@@ -41,9 +43,9 @@ class MeerkeuzeVraag extends Vraag{
   public Boolean stelVraag() {
     System.out.println("Geef uw antwoord: ");
     Scanner scanner = new Scanner(System.in);
-    Integer antwoord = 0;
-    antwoord = scanner.nextInt(); //Gebruiker geeft antwoord
-    if (antwoord==goedAntwoord) { //Check of anwtoord klopt
+    String antwoord = "";
+    antwoord = scanner.nextLine(); //Gebruiker geeft antwoord
+    if (antwoord.equals(goedAntwoord)) { //Check of anwtoord klopt
       return true;
     } else {
       return false;

@@ -1,6 +1,11 @@
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
+
+import java.io.ByteArrayInputStream;
+import java.io.IOException;
+import java.io.InputStream;
+import java.nio.charset.StandardCharsets;
 import java.util.*;
 
 import static org.junit.jupiter.api.Assertions.*;
@@ -55,5 +60,17 @@ class NewVraagTest {
                 "[3] Groningen" +
                 "[4] Amsterdam";
         assertEquals(expected,meerkvraag1.displayVraagTest());
+    }
+
+    @Test
+    void testStelVraag() {
+        String input = "27";
+        System.setIn(new ByteArrayInputStream(input.getBytes()));
+        assertTrue(opvraag1.stelVraag());
+
+        String input2 = "4";
+        System.setIn(new ByteArrayInputStream(input2.getBytes()));
+        assertTrue(meerkvraag1.stelVraag());
+
     }
 }
