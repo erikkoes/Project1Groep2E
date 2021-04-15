@@ -13,8 +13,12 @@ class Resultaat {
         this.fromExamen = e;
         this.byStudent = s;
         vragen = new ArrayList<Vraag>();
+        for (Vraag v: e.getVragen()) {
+            vragen.add(v);
+        }
 //        vragen.add(e.getVragen()); //geeft error in IDE, kan blijkbaar geen lijst in lijst zetten
         goedOfFoutPerVraag = new ArrayList<Boolean>();
+        s.getGemaakteExamens().add(this);
         alleResultaten.add(this);
     }
 
@@ -34,6 +38,10 @@ class Resultaat {
         goedOfFoutPerVraag.add(b);
 
     }
+
+    public ArrayList<Boolean> getGoedOfFoutPerVraag() {
+        return this.goedOfFoutPerVraag;
+    }
     public Double getCijfer(){
         if(goedOfFoutPerVraag.size()==0){                           //als er geen vragen zijn beantwoord word 0 returned.
             System.out.println("\nExamen is niet gemaakt\n");
@@ -50,6 +58,11 @@ class Resultaat {
             this.cijfer = goedeAntwoorden/alleVragen*10;            //cijfer word berekend door alle goede antwoorden te delen door het aantal vragen, en dan te vermenigvuldigen met 10.
             return this.cijfer;
         }
+    }
+
+    public String toString() {
+        String x = fromExamen.getNaam()+" gemaakt door "+byStudent.getName()+" met als cijfer "+this.cijfer;
+        return x;
     }
 
 }

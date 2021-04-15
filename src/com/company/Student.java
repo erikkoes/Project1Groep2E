@@ -43,8 +43,12 @@ class Student {
         this.admin=true;
     }
 
-    public void maakExamen(Examen e){
-      Resultaat r = new Resultaat(this, e);    //Er word hier een nieuwe Resultaat class aangemaakt. in deze class word opgeslgaen wat de student als resultaat heeft voor dit examen.
+    public ArrayList<Resultaat> getGemaakteExamens() {
+        return this.gemaakteExamens;
+    }
+
+    public void maakExamen(Examen e, Resultaat r){
+//      Resultaat r = new Resultaat(this, e);    //Er word hier een nieuwe Resultaat class aangemaakt. in deze class word opgeslgaen wat de student als resultaat heeft voor dit examen.
 
       e.stelVragen(r);  // in deze functie worden vragen gesteld, en word in de resultaten class toegevoegd of de vragen goed of fout zijn beantwoord.
       gemaakteExamens.add(r);

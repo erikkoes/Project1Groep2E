@@ -100,7 +100,7 @@ class Menu {
                   scanner.nextLine();
                 for(Examen ex:Examen.getAlleExamens()){
                   if(i == examen){
-                    user.maakExamen(ex);
+//                    user.maakExamen(ex);
                   }
                   i++;
                 }
